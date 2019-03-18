@@ -32,6 +32,8 @@ Route::prefix('admin')->middleware('auth')->group(function() {
         Route::post('store','ProductCategoryController@store')->name('storeNewCategory');
         Route::get('delete/{product_category}','ProductCategoryController@destroy')->name('deleteCategory');
 
+
+        Route::get('edit/{product_category}','ProductCategoryController@edit')->name('editCategory');
     });
 
 });

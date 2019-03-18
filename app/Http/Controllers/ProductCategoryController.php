@@ -59,7 +59,7 @@ class ProductCategoryController extends Controller
         // return $cat;
 
         // return $request->all();
-        return response()->view('product_categories.categoriesBindedView', compact('cats'));
+        return redirect()->back();
     }
 
     /**
@@ -82,6 +82,7 @@ class ProductCategoryController extends Controller
     public function edit(ProductCategory $productCategory)
     {
         //
+        return dd($productCategory);
     }
 
     /**
